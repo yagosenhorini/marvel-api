@@ -51,17 +51,18 @@ export default function Main() {
     return (
         <>
             <ul className="mv-hero-list">
+            
                 {useSwapi.map(item => {
                     return (
                         <>
                             <li key={item._id} onClick={e => openModal(e)} className="mv-hero-list__name" >
                                 <h3>{item.name} {item.fav && <span>(Fav)</span>}</h3>
-                                <button onClick={() => handleFavorite(item.price)}>Adicionar Heroi</button>
                             </li>
+                            <button onClick={() => handleFavorite(item.price)}>Adicionar Heroi</button>
                         </>
                     )
                 })}
-                <Modal show={isShow} close={closeModal} Image={Marvel} />
+                <Modal show={isShow} close={closeModal} texto={'oi'} Image={Marvel} />
             </ul>
 
         </>
