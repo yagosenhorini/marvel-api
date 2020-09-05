@@ -14,15 +14,15 @@ const modalRef = useRef();
     setActive(isActive); 
   }, [isActive, props]);
 
-  function activeModal(){
+  function removeModal(){
       setActive(false);
   }
   
   return(
     <>
       {useHero &&  useActive &&(
-        <S.Modal ref={modalRef} isActive={useActive}>
-          <S.CloseBtn onClick={() => activeModal()}>X</S.CloseBtn>
+        <S.Modal ref={modalRef} isActive={useActive} className={isActive ? 'is--active' : ''}>
+          <S.CloseBtn onClick={() => removeModal()}>X</S.CloseBtn>
           <S.Name>{useHero.name}</S.Name>
           <S.ImageWrapper>
             <S.Image src={`${useHero.thumbnail.path}.${useHero.thumbnail.extension}`}></S.Image>

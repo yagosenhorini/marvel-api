@@ -46,15 +46,20 @@ export const HeroButton = styled.button `
 `;
 
 export const HeroImageWrapper = styled.div `
-	width: 70%;
-  margin: 0 auto;
+	width: 75%;
+  height: 120px;
+  margin: 10px auto 0;
   @media screen and (min-width: 1024px){
     width: 40%;
-  margin: 0 auto;
+    margin: 0 auto;
   }
 `
-
 export const HeroImage = styled.img `
 	width: 100%;
-	height: auto;
+	height: 100%;
+  max-height: 140px;
+
+  &.is--lazy{
+    background-color: #000;
+  }
 `;
