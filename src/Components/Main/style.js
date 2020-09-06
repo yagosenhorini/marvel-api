@@ -39,27 +39,9 @@ export const HeroButton = styled.button `
 	font-weight: bold;
 	border-radius: 5px;
   text-transform: uppercase;
+  cursor: pointer;
   @media screen and (min-width: 1024px){
     width: 50%;
     font-size: 14px;
-  }
-`;
-
-export const HeroImageWrapper = styled.div `
-	width: 75%;
-  height: 120px;
-  margin: 10px auto 0;
-  @media screen and (min-width: 1024px){
-    width: 40%;
-    margin: 0 auto;
-  }
-`
-export const HeroImage = styled.img `
-	width: 100%;
-	height: 100%;
-  max-height: 140px;
-
-  &.is--lazy{
-    background-color: #000;
   }
 `;

@@ -1,11 +1,11 @@
 import React, {useState, useEffect, useRef} from 'react';
+import cx from 'classnames'
 import * as S from './style';
 
 export default function Modal({props}, isActive){
  
 const [useHero, setHero] = useState(null);
-const [useActive, setActive] = useState(null);
-
+const [useActive, setActive] = useState(false);
 
 const modalRef = useRef();
 
@@ -20,8 +20,8 @@ const modalRef = useRef();
   
   return(
     <>
-      {useHero &&  useActive &&(
-        <S.Modal ref={modalRef} isActive={useActive} className={isActive ? 'is--active' : ''}>
+      {useHero && useActive && (
+        <S.Modal ref={modalRef} className={cx(isActive ? 'is--active' : '')}>
           <S.CloseBtn onClick={() => removeModal()}>X</S.CloseBtn>
           <S.Name>{useHero.name}</S.Name>
           <S.ImageWrapper>
